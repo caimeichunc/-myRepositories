@@ -6,6 +6,8 @@ import lombok.Data;
 @Data
 public class Course {
 
+    private static final long serialVersionUID = 1L;
+
     @TableId(value = "cid")
     private Long cid;
     private String cname;

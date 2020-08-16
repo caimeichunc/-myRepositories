@@ -13,7 +13,7 @@ import java.util.List;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-class ShardingJdbcApplicationTests {
+class shardingJdbcTest01 {
 
     @Autowired
     private CourseMapper courseMapper;
@@ -43,9 +43,7 @@ class ShardingJdbcApplicationTests {
 
         @Test
         public  void  update(){
-
             Course course = new Course();
-
             course.setCname("hello");
             course.setCstatus("yes");
             int ccc = courseMapper.update(course, new LambdaQueryWrapper<Course>().eq(Course::getCname, "cmc"));
